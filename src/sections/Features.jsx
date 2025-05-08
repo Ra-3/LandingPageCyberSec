@@ -31,7 +31,7 @@ const Features = () => {
                 <p className="caption mb-5 max-md:mb-6">{caption}</p>
                 <h2 className="max-w-400 mb-7 h3 text-p4 ">{title}</h2>
                 <p className="mb-11 body-1 max:md:mb-8 mx-md:body-3">{text}</p>
-                <Button icon={button.icon}>{button.title}</Button>
+                {/* <Button icon={button.icon}>{button.title}</Button> */}
               </div>
             ))}
             </div> {/* Close new div */}
