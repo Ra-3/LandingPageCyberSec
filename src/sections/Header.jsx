@@ -48,14 +48,14 @@ const Header = () => {
                  max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4 "
           >
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
-              <ul className="flex max-lg:block max-lg:px-12">
-                <li className="nav-li">
+              <ul className="flex items-center justify-center max-lg:block max-lg:px-12">
+                <li className="nav-li flex items-center">
                   <NavLink title="features" />
-                  <div className="dot" />
+                  <div className="dot mx-4" />
                   <NavLink title="pricing" />
                 </li>
 
-                <li className="nav-logo">
+                <li className="nav-logo mx-8">
                   <LinkScroll
                     to="hero"
                     offset={-250}
@@ -74,18 +74,17 @@ const Header = () => {
                   </LinkScroll>
                 </li>
 
-                <li className="nav-li">
+                <li className="nav-li flex items-center">
                   <NavLink title="faq" />
-                  <div className="dot" />
-                  <NavLink title="download" />
-                  <div className="dot" />
+                  <div className="dot mx-4" />
+                  <NavLink title="demo" />
                 </li>
-                <li className="nav-li">
-                  <button className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1
+                <li className="nav-li ml-8">
+                </li>
+                <button className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1
     max-lg:my-4 max-lg:h5">
                     Sign In
                   </button>
-                </li>
               </ul>
             </nav>
             <div className="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90">

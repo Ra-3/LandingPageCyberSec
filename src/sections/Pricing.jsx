@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Element } from "react-scroll";
 import clsx from "clsx";
-import { plans } from "../constants/index.jsx";
+import { plans, pricingTableData } from "../constants/index.jsx";
 
 import CountUp from "react-countup";
 import Button from "../components/Button.jsx";
@@ -127,7 +127,7 @@ const Pricing = () => {
                       />
                     </div>
                     <div className="small-1 relative top-3 ml-1 uppercase">
-                      / mo
+                    {monthly ? "/mo" : "/yr"}
                     </div>
                   </div>
                 </div>
@@ -169,6 +169,40 @@ const Pricing = () => {
                 )}
               </div>
             ))}
+          </div>
+
+          {/* Pricing Table */}
+          <div className="mt-20">
+            <h3 className="h3 max-md:h5 max-w-640 max-lg:max-w-md mb-7 text-p4 text-center mx-auto">
+              Compare Plans
+            </h3>
+            <p className="body-1 max-lg:max-w-sm text-center mx-auto mb-10">
+              See which plan is right for your business needs
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-s1/50">
+                    <th className="text-left p-4 border border-s2">Features</th>
+                    <th className="text-center p-4 border border-s2">Starter</th>
+                    <th className="text-center p-4 border border-s2">Growth</th>
+                    <th className="text-center p-4 border border-s2 bg-s4/20 text-p3">Scale</th>
+                    <th className="text-center p-4 border border-s2">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pricingTableData.map((rowData, index) => (
+                    <tr key={index} className={clsx("border-b border-s2", index % 2 === 0 ? "bg-s1/30" : "bg-s1/50")}>
+                      <td className="text-left p-4 border border-s2">{rowData.feature}</td>
+                      <td className="text-center p-4 border border-s2">{rowData.starter}</td>
+                      <td className="text-center p-4 border border-s2">{rowData.growth}</td>
+                      <td className="text-center p-4 border border-s2 bg-s4/20 text-p3">{rowData.scale}</td>
+                      <td className="text-center p-4 border border-s2">{rowData.enterprise}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </Element>

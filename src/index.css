@@ -6,11 +6,12 @@
 
 @layer base {
   html {
-    @apply bg-s1;
+    @apply bg-s2; /* Changed background color from s1 to s2 */
   }
 
   body {
     @apply font-poppins text-[16px] tracking-[-0.03em] text-p5;
+    overflow-x: hidden;
   }
 
   a {
@@ -312,4 +313,8 @@
   }
 
   /*  END of Footer*/
-}
+  }
+  
+  .detail-icon {
+    filter: hue-rotate(120deg); /* Adjust degree for desired green shade */
+  }

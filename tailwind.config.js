@@ -14,6 +14,9 @@ export default {
         s3: '#334679',
         s4: '#1959AD',
         s5: '#263466',
+        green: { // Added green color
+          500: '#00FF00',
+        },
         black: {
           DEFAULT: '#000000',
           100: '#05091D',

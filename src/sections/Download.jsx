@@ -3,11 +3,11 @@ import { links, logos } from "../constants/index.jsx";
 import Marker from "../components/Marker.jsx";
 import { Element } from "react-scroll";
 
-const Download = () => {
+const Demo = () => {
   return (
     <section>
       <Element
-        name="download"
+        name="demo"
         className="g7 relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
         <div className="container">
@@ -22,9 +22,20 @@ const Download = () => {
                 />
               </div>
               <p className="body-1 mb-10 max-w-md">
-                Try it now for free on iOS, Android, PC, Web - Whatever your
-                flavor, we've got you covered
+              Get Started with DeepScan
+              Enter your work email below to get access to the DeepScan platform. Our Canadian-based team is ready to help secure your business.
               </p>
+              {/* Add email input and demo request button */}
+              <div className="flex items-center gap-4 mb-10">
+                <input
+                  type="email"
+                  placeholder="Enter Work Email"
+                  className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  Request for Demo
+                </button>
+              </div>
               <ul className="flex flex-wrap items-center gap-6">
                 {links.map(({ id, url, icon }) => (
                   <li
@@ -78,4 +89,4 @@ const Download = () => {
     </section>
   );
 };
-export default Download;
+export default Demo;
