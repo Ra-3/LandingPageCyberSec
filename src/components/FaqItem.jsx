@@ -3,18 +3,25 @@ import clsx from "clsx";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
 
-const FaqItem = ({ item, index }) => {
-  const [activeId, setactiveId] = useState(null);
+const FaqItem = ({ item, index, openCardIds, setOpenCardIds }) => {
+  // Determine if the current item is active based on whether its ID is in the openCardIds array
+  const active = openCardIds.includes(item.id);
 
-  const active = activeId === item.id;
+  const handleClick = () => {
+    if (active) {
+      // If the card is active, remove its ID from the openCardIds array
+      setOpenCardIds(openCardIds.filter(id => id !== item.id));
+    } else {
+      // If the card is not active, add its ID to the openCardIds array
+      setOpenCardIds([...openCardIds, item.id]);
+    }
+  };
 
   return (
     <div className="relative z-2 mb-16">
       <div
         className="group relative flex cursor-pointer items-center justify-center gap-10 px-7"
-        onClick={() => {
-          setactiveId(activeId === item.id ? null : item.id);
-        }}
+        onClick={handleClick}
       >
         <div className="flex-1">
           <div className="small-compact mb-1.5 text-p3 mg-lg:hidden">
@@ -40,7 +47,7 @@ const FaqItem = ({ item, index }) => {
         </div>
       </div>
       <SlideDown>
-        {activeId === item.id && (
+        {active && ( // Use the 'active' state which now considers openCardIds
           <div className="body-3 px-7 py-3.5">{item.answer}</div>
         )}
       </SlideDown>

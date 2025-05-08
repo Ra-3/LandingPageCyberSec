@@ -2,6 +2,7 @@ import React from "react";
 import { links, logos } from "../constants/index.jsx";
 import Marker from "../components/Marker.jsx";
 import { Element } from "react-scroll";
+import Button from "../components/Button.jsx";
 
 const Demo = () => {
   return (
@@ -32,9 +33,7 @@ const Demo = () => {
                   placeholder="Enter Work Email"
                   className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  Request for Demo
-                </button>
+                <Button icon="/images/magictouch.svg">Request for Demo</Button>
               </div>
               <ul className="flex flex-wrap items-center gap-6">
                 {links.map(({ id, url, icon }) => (
