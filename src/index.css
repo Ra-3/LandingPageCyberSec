@@ -112,7 +112,7 @@
   }
 
   .g4 {
-    background: linear-gradient(#253575, #162561);
+    background: linear-gradient(#C29EFA, #C29EFA);
   }
 
   .g5 {
@@ -124,7 +124,7 @@
   }
 
   .g7 {
-    background: linear-gradient(#1b275a, #0e1434);
+    background: linear-gradient(to bottom, #E0CFFC, #843DF5); /* Changed from navy blue to purple gradient */
   }
 
   .g8 {
@@ -229,11 +229,11 @@
   }
 
   .pricing-plan_odd {
-    @apply odd:border-s3 odd:bg-s1 lg:odd:mt-12;
+    @apply odd:border-p3 odd:bg-s1 lg:odd:mt-12;
   }
 
   .pricing-plan_even {
-    @apply even:g7 even:rounded-bl-3xl even:rounded-br-3xl even:rounded-tl-3xl even:rounded-tr-3xl even:border-s4;
+    @apply even:g4 even:rounded-bl-3xl even:rounded-br-3xl even:rounded-tl-3xl even:rounded-tr-3xl even:border-s4; /* Changed g7 to g4 */
   }
 
   /* END of Pricing */
@@ -313,6 +313,9 @@
   }
 
   /*  END of Footer*/
+.pricing-checkmark {
+    filter: hue-rotate(240deg); /* Adjust degree for desired color */
+  }
   }
   
   .detail-icon {

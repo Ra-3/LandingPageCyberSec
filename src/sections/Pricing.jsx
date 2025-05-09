@@ -103,7 +103,7 @@ const Pricing = () => {
                   <div
                     className={clsx(
                       "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
-                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1",
+                      "border-black text-black", /* Changed border-p4 and text-p4 to border-black and text-black */
                     )}
                   >
                     {plan.title}
@@ -114,7 +114,7 @@ const Pricing = () => {
                     <div
                       className={clsx(
                         "h-num flex items-start",
-                        index === 1 ? "text-p3" : "text-p4",
+                        index === 1 ? "text-p4" : "text-p4", /* Changed text-p3 to text-p4 for the Scale plan price */
                       )}
                     >
                       ${" "}
@@ -149,16 +149,16 @@ const Pricing = () => {
                       <img
                         src={"/images/check.png"}
                         alt="check"
-                        className="size-10 object-contain"
+                        className="size-10 object-contain pricing-checkmark"
                       />
                       <p className="flex-1">{feature}</p>
                     </li>
                   ))}
                 </ul>
-
+{/* 
                 <div className="mt-10 flex w-full justify-center">
                   <Button icon={plan.icon}>Get Started</Button>
-                </div>
+                </div> */}
                 {index === 1 && (
                   <p
                     className="small-compact mt-9 text-center
@@ -186,7 +186,7 @@ const Pricing = () => {
                     <th className="text-left p-4 border border-s2">Features</th>
                     <th className="text-center p-4 border border-s2">Starter</th>
                     <th className="text-center p-4 border border-s2">Growth</th>
-                    <th className="text-center p-4 border border-s2 bg-s4/20 text-p3">Scale</th>
+                    <th className="text-center p-4 border border-s2 bg-s4/20 text-black">Scale</th>
                     <th className="text-center p-4 border border-s2">Enterprise</th>
                   </tr>
                 </thead>
@@ -196,7 +196,7 @@ const Pricing = () => {
                       <td className="text-left p-4 border border-s2">{rowData.feature}</td>
                       <td className="text-center p-4 border border-s2">{rowData.starter}</td>
                       <td className="text-center p-4 border border-s2">{rowData.growth}</td>
-                      <td className="text-center p-4 border border-s2 bg-s4/20 text-p3">{rowData.scale}</td>
+                      <td className="text-center p-4 border border-s2 bg-s4/20 text-black">{rowData.scale}</td>
                       <td className="text-center p-4 border border-s2">{rowData.enterprise}</td>
                     </tr>
                   ))}

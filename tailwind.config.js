@@ -4,22 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        p1: '#2EF2FF',
-        p2: '#3C52D9',
-        p3: '#C8EA80',
-        p4: '#EAEDFF',
-        p5: '#C4CBF5',
-        s1: '#080D27',
-        s2: '#0C1838',
-        s3: '#334679',
-        s4: '#1959AD',
-        s5: '#263466',
+        p1: '#843DF5', // Violet
+        p2: '#C29EFA', // Violet
+        p3: '#E0CFFC', // Violet
+        p4: '#212034', // Dark
+        p5: '#111827', // Ebony
+        s1: '#FFFFFF', // White
+        s2: '#F5EFFF', // Violet (very light)
+        s3: '#C29EFA', // Violet
+        s4: '#843DF5', // Violet
+        s5: '#E0CFFC', // Violet
         green: { // Added green color
-          500: '#00FF00',
+          500: '#00FF00', // Keep green for now, might adjust later
         },
         black: {
-          DEFAULT: '#000000',
-          100: '#05091D',
+          DEFAULT: '#0C0020', // Black
+          100: '#05091D', // Keep black-100 for now
         },
       },
       boxShadow: {
