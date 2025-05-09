@@ -20,7 +20,7 @@ const Header = () => {
       spy
       smooth
       activeClass="nav-active"
-      className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1
+      className="base-bold text-black uppercase transition-colors duration-500 cursor-pointer
     max-lg:my-4 max-lg:h5"
     >
       {title}
@@ -30,7 +30,7 @@ const Header = () => {
     <header
       className={clsx(
         `fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4`,
-        hasScrolled && "py-2 bg-black-100 backdrop-blur-[8px]",
+        hasScrolled && "py-2 bg-[#E0CFFC] backdrop-blur-[8px]",
       )}
     >
       <div className="container flex h-14 items-center max-lg:px-5">

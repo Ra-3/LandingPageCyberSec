@@ -157,7 +157,9 @@
   /* END of Common */
   /* START of Header */
   .nav-active {
-    @apply text-p3;
+    @apply text-black;
+    background-color: #F5EFFF;
+    border: 1px solid #843DF5;
   }
 
   .nav-li {
