@@ -178,14 +178,6 @@ export const testimonials = [
     comment:
       "As an AI company, protecting our models and data is paramount. DeepScan's specialized AI security testing uncovered potential vulnerabilities in our LLM implementation that we hadn't considered.",
   },
-  {
-    id: "2",
-    name: "Melanie Hurst",
-    role: "Cyberleap",
-    avatarUrl: "/images/testimonials/melanie-hurst.png",
-    comment:
-      "Adopting this software was a breeze. It's made everyday tasks so much simpler.",
-  },
 
 ];
 
