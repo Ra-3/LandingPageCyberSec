@@ -323,3 +323,69 @@
   .detail-icon {
     filter: hue-rotate(120deg); /* Adjust degree for desired green shade */
   }
+
+  /* START of Horizontal Timeline */
+  .horizontal-timeline {
+    display: flex;
+    overflow-x: hidden;
+    padding-bottom: 20px; /* Add some padding for scrollbar */
+  }
+
+  .horizontal-timeline-item {
+    flex: 1; /* Allow items to expand */
+    margin-right: 40px;
+    position: relative;
+    text-align: center;
+  }
+
+  .horizontal-timeline-item:last-child {
+    margin-right: 0;
+  }
+
+  .horizontal-timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 20px; /* Align with the circle */
+    left: 100%;
+    width: 40px; /* Length of the connecting line */
+    height: 2px;
+    background-color: #843DF5; /* Color of the connecting line */
+    z-index: 1;
+  }
+
+  .horizontal-timeline-item:last-child::after {
+    display: none; /* No line after the last item */
+  }
+
+  .horizontal-timeline-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #843DF5; /* Color of the circle */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+  }
+
+  .horizontal-timeline-content {
+    background-color: #f3f4f6; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .horizontal-timeline-content h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .horizontal-timeline-content img {
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  /* END of Horizontal Timeline */

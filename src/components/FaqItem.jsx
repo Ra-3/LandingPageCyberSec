@@ -3,25 +3,11 @@ import clsx from "clsx";
 import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
 
-const FaqItem = ({ item, index, openCardIds, setOpenCardIds }) => {
-  // Determine if the current item is active based on whether its ID is in the openCardIds array
-  const active = openCardIds.includes(item.id);
-
-  const handleClick = () => {
-    if (active) {
-      // If the card is active, remove its ID from the openCardIds array
-      setOpenCardIds(openCardIds.filter(id => id !== item.id));
-    } else {
-      // If the card is not active, add its ID to the openCardIds array
-      setOpenCardIds([...openCardIds, item.id]);
-    }
-  };
-
+const FaqItem = ({ item, index }) => {
   return (
     <div className="relative z-2 mb-16">
       <div
-        className="group relative flex cursor-pointer items-center justify-center gap-10 px-7"
-        onClick={handleClick}
+        className="group relative flex items-center justify-center gap-10 px-7"
       >
         <div className="flex-1">
           <div className="small-compact mb-1.5 text-p3 mg-lg:hidden">
@@ -31,30 +17,19 @@ const FaqItem = ({ item, index, openCardIds, setOpenCardIds }) => {
           <div
             className={clsx(
               "h6 text-p4 transition-colors duration-500 max-md:flex max-md:min-h-20 max-md:items-center",
-              active && "max-lg:text-p1",
+              "max-lg:text-p1", // Always apply the active style
             )}
           >
             {item.question}
           </div>
         </div>
-        <div
-          className={clsx(
-            "faq-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4",
-            active && "before:bg-p1 after:rotate-0 after:bg-p1",
-          )}
-        >
-          <div className="g4 size-11/12 rounded-full shadow-300" />
-        </div>
       </div>
       <SlideDown>
-        {active && ( // Use the 'active' state which now considers openCardIds
-          <div className="body-3 px-7 py-3.5">{item.answer}</div>
-        )}
+        <div className="body-3 px-7 py-3.5">{item.answer}</div> {/* Always render content */}
       </SlideDown>
       <div
         className={clsx(
-          "g5 -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-0 transition-opacity duration-500 absolute",
-          active && "opacity-100",
+          "g5 -bottom-7 -top-7 left-0 right-0 -z-1 rounded-3xl opacity-100 transition-opacity duration-500 absolute", // Always apply opacity-100
         )}
       >
         <div className="g4 absolute inset-0.5 -z-1 rounded-3xl" />

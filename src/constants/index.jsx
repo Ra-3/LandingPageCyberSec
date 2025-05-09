@@ -39,21 +39,25 @@ export const details = [
     id: "0",
     icon: "/images/detail-1.png",
     title: "Increase Security Posture",
+    description: "Identify and fix vulnerabilities before attackers can exploit them"
   },
   {
     id: "1",
     icon: "/images/detail-2.png",
     title: "Meet Compliance Requirements",
+    description: "Ensure your organization complies with industry regulations and standards."
   },
   {
     id: "2",
     icon: "/images/detail-3.png",
     title: "Reduce Security Costs",
+    description: "Save on expensive security consultants and tools"
   },
   {
     id: "3",
     icon: "/images/detail-4.png",
     title: "Test Your GenAI Applications",
+    description: "Specialized testing for OWASP Top 10 LLM vulnerabilities in your AI systems"
   },
 ];
 
@@ -450,5 +454,36 @@ export const pricingTableData = [
     growth: "×",
     scale: "Quarterly",
     enterprise: "Monthly",
+  },
+];
+
+export const timelineData = [
+  {
+    id: "0",
+    year: "2018",
+    title: "Founded in Toronto",
+    description: "CyberImmune was established by security experts who recognized the need for Canadian-focused security solutions.",
+    image: "/images/CyberImmuneHero.png", // Placeholder, need to confirm actual image paths
+  },
+  {
+    id: "1",
+    year: "2020",
+    title: "Team Expansion",
+    description: "Our team grew to include security experts from across Canada, bringing diverse perspectives and expertise.",
+    image: "/images/testimonials/jessica-saunders.png", // Placeholder
+  },
+  {
+    id: "2",
+    year: "2022",
+    title: "DeepScan Launch",
+    description: "We launched our flagship platform, combining AI-powered scanning with human expertise for comprehensive security testing.",
+    image: "/images/Screen.png", // Placeholder
+  },
+  {
+    id: "3",
+    year: "Today",
+    title: "Leading the Industry",
+    description: "Today, we're proud to serve 50+ Canadian organizations, helping them meet compliance requirements and stay secure.",
+    image: "/images/testimonials/mark-erixon.png", // Placeholder
   },
 ];
